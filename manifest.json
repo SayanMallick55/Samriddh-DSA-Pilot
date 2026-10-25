@@ -1,0 +1,43 @@
+
+{
+  "manifest_version": 3,
+  "name": "Samriddh_DSA_Pilot",
+  "version": "0.4.0",
+  "description": "Your personal AI assistant for learning DSA.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://leetcode.com/*",
+    "http://localhost:3000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Samriddh_DSA_Pilot",
+    "default_popup": "popup.html"
+  },
+
+
+
+  
+"content_scripts": [
+  {
+    "matches": [
+      "https://leetcode.com/problems/*"
+    ],
+    "js": [
+      "content.js"
+    ],
+    "run_at": "document_idle"
+  }
+],
+"web_accessible_resources": [
+  {
+    "resources": ["page-bridge.js"],
+    "matches": ["https://leetcode.com/*"]
+  }
+]}

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samriddh_DSA_Pilot</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Samriddh_DSA_Pilot</h1>
+    <p class="subtitle">Think. Don't just solve.</p>
+
+    <button id="readBtn">Read current LeetCode problem</button>
+
+    <section id="problem">
+      <h2 id="problemTitle">No problem loaded yet</h2>
+      <p id="problemDescription">
+        Open a LeetCode problem and click the button above.
+      </p>
+    </section>
+
+    <section id="codeSection">
+      <h2>Your C++ code (read-only)</h2>
+      <pre id="codePreview">Click "Read current LeetCode problem" to inspect the editor.</pre>
+    </section>
+
+    <label for="attempt">What have you tried?</label>
+    <textarea
+      id="attempt"
+      placeholder="Explain your current approach..."
+    ></textarea>
+
+    <button id="hintBtn">Get my first hint</button>
+
+    <button id="solutionBtn" class="solution-button">
+      Give Me Full Code
+    </button>
+
+    <div id="response" role="status" aria-live="polite">
+      Your hints and solutions will appear here.
+    </div>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
